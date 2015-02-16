@@ -1,5 +1,5 @@
 > #### This theme was ported from the [Hueman](https://github.com/ppoffice/hexo-theme-hueman) Hexo theme.
-> #### Special thanks to [AlxMedia](https://github.com/AlxMedia), who designed the original theme [Hueman](https://github.com/AlxMedia/hueman) for wordpress sites and [ppoffice](https://github.com/ppoffice) who ported it for use with Hexo.
+> #### Special thanks to [ppoffice](https://github.com/ppoffice) who ported the wordpress theme [Hueman](https://github.com/AlxMedia/hueman) for use with Hexo and of course to [AlxMedia](https://github.com/AlxMedia) for his original creation of the wordpress version.
 
 # Flinn
 ### Probably the most personalized theme for Hexo ;)
@@ -13,16 +13,16 @@
 $ git clone https://github.com/ppoffice/hexo-theme-hueman.git themes/hueman
 ```
 
-**Hueman requires Hexo 2.4 and above.**
+**Flinn requires Hexo 2.4 and above.**
 
 ### Enable
 
-Modify `theme` setting in `_config.yml` to `hueman`.
+Modify `theme` setting in `_config.yml` to `flinn`.
 
 ### Update
 
 ``` bash
-cd themes/hueman
+cd themes/flinn
 git pull
 ```
 
