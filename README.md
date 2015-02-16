@@ -1,11 +1,9 @@
-> #### This theme is ported from the [Hueman](https://github.com/ppoffice/hexo-theme-hueman) Hexo theme.
-> #### If you like Flinn, don't forget to 'Star' the project and share it with your friends! :）
+> #### This theme was ported from the [Hueman](https://github.com/ppoffice/hexo-theme-hueman) Hexo theme.
+> #### Special thanks to [AlxMedia](https://github.com/AlxMedia), who designed the original theme [Hueman](https://github.com/AlxMedia/hueman) for wordpress sites and [ppoffice](https://github.com/ppoffice) who ported it for use with Hexo.
 
 # Flinn
 ### Probably the most personalized theme for Hexo ;)
 ![](http://ppoffice.github.io/hexo-theme-hueman/gallery/preview.jpg "")
-
-##### Special thanks to [AlxMedia](https://github.com/AlxMedia), who designed the original theme [Hueman](https://github.com/AlxMedia/hueman) for wordpress sites and [ppoffice](https://github.com/ppoffice) who ported it for use with Hexo.
 
 ## Installation
 
