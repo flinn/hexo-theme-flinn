@@ -1,8 +1,8 @@
 > #### This theme was ported from the [Hueman](https://github.com/ppoffice/hexo-theme-hueman) Hexo theme.
-> #### Special thanks to [ppoffice](https://github.com/ppoffice) who ported the wordpress theme [Hueman](https://github.com/AlxMedia/hueman) for use with Hexo and of course to [AlxMedia](https://github.com/AlxMedia) for his original creation of the wordpress version.
+> #### Special thanks to [ppoffice](https://github.com/ppoffice) who ported the WordPress theme [Hueman](https://github.com/AlxMedia/hueman) for use with Hexo and of course to [AlxMedia](https://github.com/AlxMedia) for his original creation of the WordPress version.
 
 # Flinn
-### Probably the most personalized theme for Hexo ;)
+### This is probably the most personalized theme for Hexo, so I apologize in advance that it's unlikely to be useful for anyone else ;)
 ![](http://ppoffice.github.io/hexo-theme-hueman/gallery/preview.jpg "")
 
 ## Installation
