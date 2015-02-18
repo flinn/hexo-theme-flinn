@@ -23,7 +23,7 @@ Modify `theme` setting in `_config.yml` to `flinn`.
 
 ``` bash
 cd themes/flinn
-git pull
+git checkout master
 ```
 
 ## Configuration

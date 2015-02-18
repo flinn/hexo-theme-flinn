@@ -25,11 +25,9 @@
   <% if (theme.rss){ %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
-  <% if (theme.favicon){ %>
-    <link rel="icon" href="<%- theme.favicon %>">
-  <% } %>
-  <link href='//fonts.useso.com/css?family=Titillium+Web:300,400,600' rel='stylesheet' type='text/css'>
-  <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico?v=5" />
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono|Strait|Open+Sans|Reenie+Beanie' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <%- css('css/style') %>
   <%- partial('google-analytics') %>
 </head>

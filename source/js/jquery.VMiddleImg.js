@@ -1,8 +1,3 @@
-/*
-* @author 愚人码头
-* 【jQuery插件】图片垂直水平缩放显示
-* 更多
-*/
 (function($){
     $.fn.VMiddleImg = function(options) {
         var defaults={
@@ -12,26 +7,24 @@
         var opts = $.extend({},defaults,options);
         return $(this).each(function() {
             var $this = $(this);
-            var objHeight = $this.height(); //图片高度
-            var objWidth = $this.width(); //图片宽度
-            var parentHeight = opts.height||$this.parent().height(); //图片父容器高度
-            var parentWidth = opts.width||$this.parent().width(); //图片父容器宽度
+            var objHeight = $this.height();
+            var objWidth = $this.width();
+            var parentHeight = opts.height||$this.parent().height();
+            var parentWidth = opts.width||$this.parent().width();
             var ratio = objHeight / objWidth;
             if (objHeight > parentHeight && objWidth > parentWidth) {
-                if (objHeight > objWidth) { //赋值宽高
+                if (objHeight > objWidth) {
                     $this.width(parentWidth);
                     $this.height(parentWidth * ratio);
                 } else {
                     $this.height(parentHeight);
                     $this.width(parentHeight / ratio);
                 }
-                objHeight = $this.height(); //重新获取宽高
+                objHeight = $this.height();
                 objWidth = $this.width();
                 if (objHeight > objWidth) {
                     $this.css("top", (parentHeight - objHeight) / 2);
-                    //定义top属性
                 } else {
-                    //定义left属性
                     $this.css("left", (parentWidth - objWidth) / 2);
                 }
             }

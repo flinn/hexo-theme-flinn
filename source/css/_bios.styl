@@ -1,0 +1,46 @@
+.bios
+  display block
+  float: right
+  margin-top: -10px
+  width: bios-width
+  height: bios-height
+  background: url(bios-img) no-repeat
+  background-size: bios-width bios-height
+
+div.eyes
+  float: right
+  top: 32px
+  left: 60px
+  width: 55px
+  height: 30px
+  margin: 0 auto
+  position: relative
+  margin-bottom: 40px
+
+div.left_eye, div.right_eye 
+  width: 20px
+  height: 20px
+  top: 0
+  right: 0
+  position: absolute
+  background-repeat: no-repeat
+  background-position: center center            
+
+div.left_eye
+  left: 0
+
+div.right_eye
+  right: 0
+
+div.eyes div.pupil 
+  left: 2px
+  top: 2px
+  width: 15px
+  height: 15px
+  position: relative
+  background-image: url("images/eye_pupil.png")
+  background-repeat: no-repeat
+  background-position: center center
+
+#bioseyes div.left_eye, #bioseyes div.right_eye 
+  background-image: url("images/eye_outline.png")

@@ -12,7 +12,7 @@ fancybox: true
 thumbnail: true
 
 # Scroll Loading
-scrollLoading: true
+scrollLoading: false
 
 # Sidebar
 social_links:

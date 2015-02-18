@@ -6,14 +6,50 @@
     display: block !important
 
 /* ------------------------------------------------------------------------- *
+ *  Style Fix : 479px < 675px 
+/* ------------------------------------------------------------------------- */
+@media only screen and (min-width: 479px) and (max-width: 675px)
+  #header-title .subtitle
+    display: none
+  #main-nav .main-nav-list-item .main-nav-list-link
+    padding: 15px 3px
+
+  #main-nav .main-nav-list-item .main-nav-list-link i
+    display: none
+
+  #search-form-wrap
+    display: none
+
+  .nav-container .nav-container-inner #main-nav
+    float: none
+
+/* ------------------------------------------------------------------------- *
+ *  Style Fix : < 600px 
+/* ------------------------------------------------------------------------- */
+@media only screen and (min-width: 0px) and (max-width: 600px)
+  .bios-wrap
+    display: none
+  .logo-wrap
+      width: 100%
+      display: block
+      text-align: center
+      .logo
+        margin: 0 auto
+
+/* ------------------------------------------------------------------------- *
  *  Toggle Sidebar s1 : 959px > 480px
 /* ------------------------------------------------------------------------- */
 @media only screen and (min-width: 480px) and (max-width: 959px)
-  #header
-    padding-bottom: sidebar-toggle-width
+  .eyes
+    display: none !important  
+  .bios
+    float: right
+  #header    
     .nav-container-inner
       display: block !important
       #main-nav
+        .main-nav-list-link
+          font-size: 14px
         .main-nav-more > ul
           .main-nav-list-child
             position: relative
@@ -85,15 +121,31 @@
  *  Mobile (Low Res) : 479px > 0 (320px)
 /* ------------------------------------------------------------------------- */
 @media only screen and (max-width: 479px)
+  body
+    font: 10px "Open Sans", "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", sans-serif
+  .article-entry 
+    font-size: 12px
+  .article-inner
+    margin-top: 50px
+  #header-inner
+    border-radius: 0px
+    -webkit-border-radius: 0px
+  #welcome-container
+    margin-top: 50px
+    padding: 10px 10px 
+  .bios-wrap
+    display: none
   .container
     padding: 0px
+  #menulogo
+    position: absolute
+    top: 0px
+    display: block !important
+  #header-title
+    display: none
   #header
-    .logo-wrap
-      width: 100%
-      display: block
-      text-align: center
-      .logo
-        margin: 0 auto
+    .logo-wrap      
+      display: none      
     .subtitle-wrap
       display: none
     .nav-container
@@ -142,7 +194,7 @@
             font-size: font-size
         .search-form-input
           font-size: font-size
-          width: 90%
+          width: 75%
   .main-body-inner
     padding: 0px
     background: none

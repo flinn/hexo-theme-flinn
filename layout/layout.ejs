@@ -2,11 +2,35 @@
 <body>
   <div id="wrap">
     <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
-    <div class="container">
+    <div id="welcome-container" class="container hidden wow fadeInUp">
+      <div class="container-inner">
+        <section id="terminal">
+          <div id="terminal-window" class="terminalify terminal-hidden">
+          </div>
+        </section>
+        <section id="intro">
+          <div class="group">
+            <div class="left">
+                <h1>Hey there, I'm Matt&hellip;</h1>
+                <p>Thanks for checking out my site! <strong>So, who is Flinn?</strong> Well, that's actually my last name. Most people just call me <em>"Flinn"</em> because <em>"Matt"</em> is such a common name. I'm cool with both.</p>
+                <p>I live in the <strong>Washington, DC area</strong> and work at <a href="http://www.fool.com" target="_blank">The Motley Fool</a> in Alexandria, VA developing mobile applications and helping the world to invest — better.</p>
+                <p>My partner in crime is my <strong>French Bulldog named Bios</strong>. Unlike mine, his name isn't quite so common. If you hadn't realized by now, I'm a big nerd — His name comes from the acronym <a href="http://en.wikipedia.org/wiki/BIOS" target="_blank"><em>"Basic Input Output System"</em></a>.</p>
+                <p>If you've got any questions for me, feel free to shoot me a message via the <a href="/contact/index.html">Contact Form</a>.</p>
+                <p>Best,</p>
+                <p class="byhand">Matt Flinn</p>
+            </div>
+            <div class="right">
+                <img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10628589_10203275000346937_6985373819814911684_n.jpg?oh=2f7b8dd2e3247d472762e0b326323bcc&oe=55579BA7&__gda__=1435923160_1d196915f69530c862223f361529fd3f" alt="Matt Flinn" class="responsive" />              
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="body-container" class="container hidden wow fadeIn">
       <div class="main-body container-inner">
         <div class="main-body-inner">
           <section id="main">
-            <div class="main-body-header">
+            <!--<div class="main-body-header">
 <% var title = page.title;
 if (is_archive()){
   title = __('index.archive');
@@ -32,7 +56,7 @@ if (is_archive()){
   title = config.title;
 } %>
               <h1 class="header"><% if (title){ %><%- title %><% } %></h1>
-            </div>
+            </div>-->
             <div class="main-body-content">
               <%- body %>
             </div>
@@ -41,8 +65,10 @@ if (is_archive()){
         </div>
       </div>
     </div>
+    <div id="spacer" class="spacer">
+    </div>
     <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
     <%- partial('_partial/after-footer') %>
-  </div>
+  </div>  
 </body>
 </html>

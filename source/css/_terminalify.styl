@@ -1,17 +1,52 @@
 /* FINDER WINDOW */
-#window{
+#terminal-window{
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom:0px;
-    min-width: 500px;
-    height: 300px;
-    /*background: #fff;*/
+    height: 480px;    
+    margin-bottom: 40px;
+    min-width: 300px;
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 20px rgba(0,0,0,0.75);
-    /*-webkit-transition:all 0.5s; */
-    overflow: hidden; 
+    -webkit-transition:all 0.5s;
+    overflow: hidden;
+}
+
+#terminal-body {
+    width: 100%;
+    height: 435px;
+    line-height: 1em;
+    font-size:13px;
+    float: left;    
+    overflow-y: scroll;
+    background:#5D6364;
+    padding:10px;
+}
+
+@media (min-width: 720px) {
+    #terminal-window {
+        height: 280px;
+    }
+    #terminal-body {
+        height: 235px;
+    }
+}
+
+.terminal-minimized {
+    height: 25px !important;
+}
+
+//Hides the terminal before values have initialized
+.terminal-hidden {
+    visibility: hidden;
+}
+
+//Hidden Terminal DOM Area
+#terminal-hidden {
+    width: 0px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    top: 0px;    
 }
 
 /* TOP BAR */
@@ -36,38 +71,41 @@
     margin-left: 5px;
 }
 #topbar ul li:nth-child(2){
-    font-family: "Myriad-Semi", sans-serif;
+    font-family: "Myriad Pro", sans-serif;
 }
 #topbar ul li:active{
     background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #4a82ff),color-stop(0, #0052fc));
     color: #fff;
     text-shadow: none;
 }
-#toolbar{
+#terminal-toolbar{
     width: 100%; 
     height: 25px;
     background: grey;
     border-radius:5px 5px 0 0;
-
     background: #cfcfcf; /* Old browsers */
+    -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;
+    -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;
+    box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;        
+    
+}
+
+#terminal-toolbar .activated {
+    background: #cfcfcf; /* Old browsers */       
     background: -moz-linear-gradient(top,  #cfcfcf 0%, #a8a8a8 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfcfcf), color-stop(100%,#a8a8a8)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* Chrome10+,Safari5.1+ */
     background: -o-linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* Opera 11.10+ */
     background: -ms-linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* IE10+ */
     background: linear-gradient(top,  #cfcfcf 0%,#a8a8a8 100%); /* W3C */
-    
-    -webkit-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;
-    -moz-box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;
-    box-shadow:0px 1px 0px rgba(255,255,255,0.5) inset,0px 1px 0px #515151;        
-    
 }
-#toolbar .top{
+
+#terminal-toolbar .top{
     float: left; 
     width: 100%; 
     height: 23px;
 }
-#toolbar .bottom{
+#terminal-toolbar .bottom{
     float: left; 
     width: 100%; 
     height: 30px;
@@ -88,7 +126,7 @@
     margin: none;
     padding: none;
 }
-#toolbar #lights{
+#terminal-toolbar #lights{
     float: left;
     position:relative;
     top:4px;
@@ -160,7 +198,7 @@
 }
 .red .glyph{
     position: relative;
-    top: 0px;
+    top: -3px;
     left: 3px;
     font-size: 14px;
     font-weight: bold;
@@ -199,9 +237,9 @@
 }
 .yellow .glyph{
     position: relative;
-    top: -6px;
-    left: 4px;
-    font-size: 24px;
+    top: -9px;
+    left: 2px;
+    font-size: 19px;
     color: #854322;
     z-index: 50;
     opacity: 0;
@@ -239,10 +277,10 @@
 }
 .green .glyph{
     position: relative;
-    top: 0px;
-    left: 3px;
-    font-size: 14px;
-    font-weight: bold;
+    top: -6px;
+    left: 2px;
+    font-size: 18px;
+    font-weight: bolder;
     color: #25571d;
     z-index: 50;
     opacity: 0;
@@ -271,9 +309,9 @@
 #title{
     float: left; 
     position: relative;
-    top:4px;
-    width:40%;
-    left: 30%;
+    top: 8px;
+    width:45%;
+    left: 39%;
     font-family: "Myriad Pro", sans-serif; 
     font-size: 14px; 
     text-shadow: 0px 1px 0px rgba(255,255,255,0.5);
@@ -282,6 +320,7 @@
 .folder{
     float: left;
     margin-right:5px;
+    margin-top: -3px;
 }
 .folder .tab{
     width:4px;
@@ -295,7 +334,7 @@
     z-index: 5000;
     margin-bottom: -1px; 
 }
-.folder .body{
+.folder .folder-body {
     width: 14px;
     height: 10px;
     border:1px solid #6e8ba1;
@@ -345,19 +384,10 @@
     background: #b0afb0; 
     -webkit-box-shadow:0px 0px 4px #000 inset;
 }
+
 .active{
     background: #707070 !important;
     -webkit-box-shadow:0px 3px 4px rgba(0,0,0,0.6) inset !important;
-}
-
-#body {
-    font-family: Andale Mono, monospace;  line-height: 1em;
-    font-size:13px;
-    float: left;
-    width: 100%;
-    height: 300px;
-    background:#5D6364;
-    padding:10px;
 }
 
 @keyframes blink {
@@ -380,7 +410,7 @@
   height:15px;
   margin-bottom:-3px;
 }
-#body:hover .cursor {
+#terminal-body:hover .cursor {
     -webkit-animation-name: blink;
     -webkit-animation-duration: 1.5s;
     -webkit-animation-iteration-count: infinite;
@@ -389,13 +419,13 @@
     -moz-animation-iteration-count: infinite;
 }
   
-#body p::-webkit-selection  {
+#terminal-body p::-webkit-selection  {
     background:#0b209e;
 }
-#body p::selection { background:#0b209e; }
-#body p::-moz-selection { background:#0b209e; }
+#terminal-body p::selection { background:#0b209e; }
+#terminal-body p::-moz-selection { background:#0b209e; }
 
-p {
+#terminal-body p {
     display: block;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
@@ -403,74 +433,12 @@ p {
     -webkit-margin-end: 0px;
 }
 
-#body p {
+#terminal-body p {
   color: #91E022 !important;
   margin-bottom: 4px;
   font-size:13px;
 }
 
-#body p .input {
+#terminal-body p .input {
     color: White !important;
-}
-
-#content{
-    float: left; 
-    margin-top: 1px;
-}
-#foot{
-    height: 23px;
-    width: 100%;
-    float: left;
-    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(1, #cbcbcb),color-stop(0, #a7a7a7));
-    border-top:1px solid #515151;
-    border-radius:0 0 5px 5px;
-}
-#foot .handle{
-    width: 11px;
-    height: 11px;
-    float: right;
-    margin: 6px;
-    overflow: hidden;
-}
-.handle .grip{
-    -webkit-transform: rotate(45deg) scaley(3);
-    margin: 2px 0 0 2px;
-    color: #646464;
-    text-shadow: 1px 1px 0 #c6c6c6;
-    font-size: 14px;
-}
-
-.icon{
-    width: 86px; 
-    height: 100px;
-    margin: 20px; 
-    float: left;
-    font-family: "Myriad Pro", sans-serif; 
-    text-align: center; 
-    font-size: 12px;
-}
-.icon .frame{
-    width: 82px;
-    height: 82px; 
-    border-radius: 5px;
-    border: 2px solid transparent; 
-}
-.icon .name{
-    color: #000;
-    padding-top: 3px; 
-    border-radius:15px;
-    width: 55px;
-    margin: 5px 0 0 15px;
-}
-.icon .folder{
-    margin:15px 0 0 6px;
-}
-
-@media (min-width: 720px) {
-    #window {
-        height: 180px;
-    }
-    #body {
-        height: 180px;
-    }
 }

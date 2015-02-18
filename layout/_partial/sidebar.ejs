@@ -1,12 +1,12 @@
 <aside id="sidebar">
   <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
   <div class="sidebar-top">
-    <p><%= __('sidebar.follow') %>:</p>
+    <p>FOLLOW</p>
     <ul class="social-links">
-      <% for (var i in theme.social_links){ %>
-        <li><a class="social-tooltip" title="<%= i %>" href="<%- url_for(theme.social_links[i]) %>"><i id="icon-<%= i %>" class="icon"></i></a></li>
-      <% } %>
-    </ul>
+      <li><a class="social-tooltip" title="facebook" href="/"><i class="fa fa-facebook-square fa-3"></i></a></li>
+      <li><a class="social-tooltip" title="twitter" href="/"><i class="fa fa-twitter-square fa-3"></i></a></li>
+      <li><a class="social-tooltip" title="linkedin" href="/"><i class="fa fa-linkedin-square fa-3"></i></a></li>
+      <li><a class="social-tooltip" title="github" href="/"><i class="fa fa-github-square fa-3"></i></a></li>
   </div>
   <% if(is_post()) { %>
     <%- partial('post/nav', {post: page}) %>

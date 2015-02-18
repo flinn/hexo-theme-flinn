@@ -1,66 +1,37 @@
 <header id="header">
   <div id="header-outer" class="outer">
     <div class="container">
-      <div class="container-inner">
+      <div class="container-inner">        
         <div id="header-title">
-          <h1 class="logo-wrap">
-            <a href="<%- url_for() %>" class="logo"></a>
-          </h1>
-          <% if (theme.subtitle){ %>
-            <h2 class="subtitle-wrap">
-              <p class="subtitle"><%= theme.subtitle %></p>
-            </h2>
-          <% } %>
-        </div>
-        <div id="window" class="terminalify">
-          <div id="toolbar">
-            <div class="top">
-              <div id="lights">
-                <div class="light red">
-                  <div class="glyph"><span class="btnExit">&#10006;</span></div>
-                  <div class="shine"></div>
-                  <div class="glow"></div>
-                </div>
-                <div class="light yellow">
-                  <div class="glyph"><span class="btnMin">-</span></div>
-                  <div class="shine"></div>
-                  <div class="glow"></div>
-                </div>
-                <div class="light green">
-                  <div class="glyph"><span class="btnMax">+</span></div>
-                  <div class="shine"></div>
-                  <div class="glow"></div>
-                </div>
+          <div class="bios-wrap wow bounceInRight">
+            <div id="bios" class="bios"></div>
+            <div id="bioseyes" class="eyes">
+              <div id="bioslefteye" class="left_eye">
+                <div class="pupil"></div>
               </div>
-              <div id="title">
-                <div class="folder">
-                  <div class="tab"></div>
-                  <div class="body"></div>
-                </div>
-                1. Terminal (node)
-              </div>
-              <div id="bubble">
-                <div class="shine"></div>
-                <div class="glow"></div>
+              <div id="biosrighteye" class="right_eye">
+                <div class="pupil"></div>
               </div>
             </div>
           </div>
-          <div id="body" class="terminal-window">
-            <p> Last login: <span class="terminalify-lastlogin"></span></p>
-            <p><span class="user"></span><span id="terminalify-command" class="input"></span><span class="cursor"></span></p>
-            <p id="last-input"></p>
-          </div>
+          <h1 class="logo-wrap wow bounceInLeft" style="visibility: visible;">
+            <a href="/" class="logo"></a>
+          </h1>
+          <h2 class="subtitle-wrap wow bounceInDown">
+             <p class="subtitle"><span class="muted"><i class="fa fa-angle-right"></i></span></i>whois flinn<span class="muted fadeinout">_</span></p>
+          </h2>          
         </div>
-        <div id="header-inner" class="nav-container">
+        <div id="navanchor" style="position: relative; height: 0px">&nbsp;</div>   
+        <div id="header-inner" class="nav-container hidden">
           <a id="main-nav-toggle" class="nav-icon"></a>
-          <div class="nav-container-inner">
-            <ul id="main-nav">
-              <% for (var i in theme.menu){
-                  if(i == 'Categories'){ %>
-                    <%- list_categories({show_count: false, depth: 2, class: 'main-nav', style: 'list'}) %>
-                  <% } else { %>
-                <li class="main-nav-list-item" ><a class="main-nav-list-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
-              <% }} %>
+          <div id="nav-container-inner" class="nav-container-inner">
+            <a id="menulogo" href="/" class="small-logo"></a>
+            <ul id="main-nav">            
+              <li class="main-nav-list-item"><a class="main-nav-list-link" href="/"><i class="fa fa-home"></i> Home</a></li>
+              <li class="main-nav-list-item"><a class="main-nav-list-link" href="/about/"><i class="fa fa-user-secret"></i> About</a></li>
+              <li class="main-nav-list-item"><a class="main-nav-list-link" href="/blog/"><i class="fa fa-newspaper-o"></i> Blog</a></li>
+              <li class="main-nav-list-item"><a class="main-nav-list-link" href="/projects/"><i class="fa fa-sitemap"></i> Projects</a></li>              
+              <li class="main-nav-list-item"><a class="main-nav-list-link" href="/contact/"><i class="fa fa-envelope"></i> Contact</a></li>
             </ul>
             <nav id="sub-nav">
               <div id="search-form-wrap">

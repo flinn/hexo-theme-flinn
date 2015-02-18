@@ -1,9 +1,26 @@
 @import "nib"
 @import "_variables"
 @import "_extend"
-@import "_terminalify"
 
 global-reset()
+
+@import "_terminalify"
+@import "_bios"
+@import "_animation"
+
+em
+  font-style: italic
+
+body
+  background: url(bg-image) no-repeat
+  background-attachment: fixed
+  background-position: center
+  background-size: cover
+  font: font-size font-sans
+  -webkit-text-size-adjust: 100%
+
+.hidden 
+  display: none !important;
 
 input, button
   margin: 0
@@ -25,10 +42,72 @@ input, button
 html, body, #container
   height: 100%
 
-body
-  background: color-background
-  font: font-size font-sans
-  -webkit-text-size-adjust: 100%
+#intro
+  color: White
+
+#intro a 
+  color: lightpurp
+  text-decoration: none
+
+#intro strong
+  font-weight: bold
+  color: burnt
+  font-size: 18px
+
+.group
+  padding: 40px 40px
+  background-color: rgba(0,0,0,0.4) 
+
+#intro h1
+  font-family: 'Strait', Calibri, sans-serif
+  font-size: 44px
+  margin-bottom: 10px;
+
+.byhand
+  font: 38px 'Reenie Beanie', cursive  
+
+#terminal
+  font: 16px 'Droid Sans Mono', monospace !important
+
+.left 
+    float: left
+    width: 45%
+
+.right 
+    float: right
+    width: 45%
+
+img 
+  max-width: 100%
+  height: auto
+  top: 0px !important
+
+img.responsive
+  width: 100%
+
+.group:after 
+    content:""
+    display: table
+    clear: both
+
+.group p 
+  padding: 10px 0px 5px 0px
+  font-weight: normal
+
+
+@media screen and (max-width: 750px) 
+    .left, .right 
+      float: none
+      width: auto
+    .right 
+      margin-top: 20px
+
+
+#body-container
+  margin-top: 80px;
+
+#welcome-container
+  padding-top: 40px;
 
 .container
   position: relative
@@ -41,14 +120,26 @@ body
   width: 100%
   margin: 0 auto
 
-.left, .alignleft
+.alignleft
   float: left
 
-.right, .alignright
+.alignright
   float: right
 
 .clear
-  clear: both
+  clear: both  
+
+.small-logo
+  position: relative
+  margin-top: 5px
+  padding: 0px 15px
+  left: 15px
+  float: left
+  display: block
+  width: 44px
+  height: 40px
+  background: url(logo-img) 0px 0px no-repeat
+  background-size: 44px 40px
 
 .logo
   display: block
@@ -100,5 +191,6 @@ body
 @import "_partial/footer"
 @import "_partial/highlight"
 @import "_partial/assets"
+@import "_partial/nprogress"
 @import "_retina"
 @import "_responsive"

@@ -14,24 +14,19 @@
 </script>
 <% } %>
 
-<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
-<script src="//libs.useso.com/js/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <%- js('js/jquery.VMiddleImg') %>
 
-<% if (is_home()) { %>
-  <%- js('js/terminalify') %>
-  <%- js('js/terminal') %>
-<% } %>
+<%- js('js/whoisflinn') %>
+<%- js('js/bios') %>
+<%- js('js/nprogress') %>
+<%- js('js/terminalify') %>
+<%- js('js/stickyMenu') %>
+<%- js('js/wow') %>
 
 <% if (theme.fancybox){ %>
   <%- css('fancybox/jquery.fancybox') %>
   <%- js('fancybox/jquery.fancybox.pack') %>
-<% } %>
-
-<% if (theme.scrollLoading){ %>
-  <%- css('scrollLoading/style') %>
-  <%- js('scrollLoading/jquery.scrollLoading') %>
-  <%- js('scrollLoading/main') %>
 <% } %>
 
 <%- js('js/html-patch') %>
